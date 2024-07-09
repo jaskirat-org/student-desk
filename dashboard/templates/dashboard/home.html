@@ -1,0 +1,124 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+<div class="home-bg">
+  <div class='console-container'><span id='text'></span>
+    <div class='console-underscore' id='console'>&#95;</div>
+  </div>
+  <!-- <h3>Welcome to Student Desk!</h3> -->
+</div>
+
+<section class="container text-center">
+  <hr>
+  <div class="cont-for-grid">
+    <div class="row">
+      <div class="col-md-3">
+        <a href="{% url 'notes' %}">
+          <div class="card">
+            <div class="for-image">
+              <img class="card-img-top" src="{% static 'images/notes.jpg' %}" alt="Notes image">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title ">
+                Notes
+              </h5>
+              <!-- Create Notes to refer them later. They are stored permanently until deleted -->
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+      <div class="col-md-3">
+        <a href="{% url 'youtube' %}">
+          <div class="card">
+            <div class="for-image">
+              <img class="card-img-top" src="{% static 'images/youtube.png' %}" alt="YouTube image">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title ">
+                Youtube
+              </h5>
+              <!-- Search Youtube and select your desired video to play it on youtube -->
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3">
+        <a href="{% url 'refer' %}">
+          <div class="card">
+            <div class="for-image">
+              <img class="card-img-top" src="{% static 'images/ref_mat.jpg' %}" alt="Reference material image">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title ">
+                Reference Material
+              </h5>
+              <!-- Access reference material uploaded by your teachers -->
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-3 ">
+        <a href="{% url 'books' %}">
+          <div class="card mt-20">
+            <div class="for-image">
+              <img class="card-img-top" src="{% static 'images/book.jpg' %}" alt="Book image">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title ">
+                Books
+              </h5>
+              <!-- Browse books from a list of neatly organised book menu -->
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="{% url 'dictionary' %}">
+          <div class="card">
+            <div class="for-image">
+              <img class="card-img-top" src="{% static 'images/dictionary.png' %}" alt="Dictionary image">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title ">
+                Dictionary
+              </h5>
+              <!-- A vocabulary from a book is troubling you? No problem, enter the word, and the meaning will be displayed
+              almost instantaneously. -->
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="{% url 'wiki' %}">
+          <div class="card">
+            <div class="for-image">
+              <img class="card-img-top" src="{% static 'images/wiki.png' %}" alt="WikiPedia image">
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title ">
+                WikiPedia
+              </h5>
+              <!-- Homework and Assignments? Search wikipedia to get fast results -->
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript" src="{% static 'js/welcome.js' %}"></script>
+
+
+</section>
+{% endblock content %}
